@@ -1,0 +1,16 @@
+version: '3.4'
+services:
+ web-app:
+  build:
+   context: .
+   network: host
+   dockerfile: web-app.docker
+  container_name: web-app
+  ports:
+   - "5000:5000"
+ test-app:
+  build:
+   context: .
+   network: host
+   dockerfile: app-test.docker
+  container_name: test-app
