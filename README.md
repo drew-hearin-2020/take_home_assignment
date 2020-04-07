@@ -32,7 +32,7 @@ a sample of that page will look something like this:
 
 To view requests from the web-app point of view, we can tail the logs like so: 
 ```sh
-docker logs -f < web-app container ID> 
+docker logs -f web-app 
 ```
 ```sh
 172.19.0.2 - - [06/Apr/2020 20:01:13] "GET / HTTP/1.1" 200 -
@@ -55,7 +55,7 @@ requests_log.setLevel(logging.ERROR)
 ```
 If we issue a:
 ```sh
-docker logs -f < app-test container ID> 
+docker logs -f test-app 
 ```
 You will see the Success / Failure / Time to Last Byte currently being requested from our "api" at a rate of 4x per second.
 
