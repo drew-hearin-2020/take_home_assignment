@@ -58,7 +58,7 @@ If we issue a:
 ```sh
 docker logs -f test-app 
 ```
-You will see the Success / Failure / Time to Last Byte currently being requested from our "api" at a rate of 4x per second.
+You will see the Success / Failure / Time to Last Byte currently being requested from our "api" at a rate of 4x per second (arbitrary).
 
 app-test sample output against our endpoint:
 ```sh
