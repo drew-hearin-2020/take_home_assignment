@@ -7,13 +7,14 @@ To run, simply clone this repo, while in this directory issue a:
 ```sh
 docker-compose up -d 
 ```
+
+This will build and launch two containers: **test-app** and **web-app**.
+
 To stop both containers:
 ```sh
 docker stop web-app && docker stop test-app
 ```
 
-
-This will build and launch two containers: **test-app** and **web-app**.  A an overview of each can be found below:
 
 #### Description:
 
