@@ -12,5 +12,5 @@ services:
   build:
    context: .
    network: host
-   dockerfile: app-test.docker
+   dockerfile: test-app.docker
   container_name: test-app
