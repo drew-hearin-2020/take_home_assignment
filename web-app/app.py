@@ -4,13 +4,13 @@ import datetime, json
 
 app = Flask(__name__)
 
+class DateTimeEncoder(JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, (datetime.date, datetime.datetime)):
+            return obj.isoformat()
+
 @app.route("/")
 def getDate():
-    class DateTimeEncoder(JSONEncoder):
-        def default(self, obj):
-            if isinstance(obj, (datetime.date, datetime.datetime)):
-                return obj.isoformat()
-
     current_date = { "Current DateTime ": datetime.datetime.now() }
     currentJSONData = json.dumps(current_date, cls=DateTimeEncoder)
     return currentJSONData
