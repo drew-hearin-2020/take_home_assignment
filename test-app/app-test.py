@@ -14,7 +14,7 @@ def uptime_check():
         threading.Timer(0.25, uptime_check).start ()
         response = requests.get("http://web-app:5000/",timeout=30)
         if not response.raise_for_status():
-            print("Succesful connection,", "Time to Last Byte:", response.elapsed.total_seconds())
+            print("Successful connection,", "Time to Last Byte:", response.elapsed.total_seconds())
     except requests.exceptions.HTTPError as err:
         print(err)
 
